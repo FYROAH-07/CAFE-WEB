@@ -1,0 +1,1504 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
+:root {
+    --cream: #f5f0e8;
+    --coffee: #30231d;
+    --brown: #79543d;
+    --muted: #8c7d70;
+    --line: rgba(48, 35, 29, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--cream);
+    color: var(--coffee);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+::selection {
+    background: var(--coffee);
+    color: var(--cream);
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 6%;
+    border-bottom: 1px solid var(--line);
+    animation: fadeDown 0.8s ease both;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+.logo span {
+    font-weight: 400;
+    color: var(--brown);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a,
+.nav-button {
+    font-size: 11px;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-button:hover {
+    opacity: 0.55;
+}
+
+.nav-button {
+    border: 1px solid var(--coffee);
+    border-radius: 40px;
+    padding: 12px 18px;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--coffee);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* HERO */
+
+.hero {
+    padding: 24px 6% 65px;
+}
+
+.hero-top,
+.hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-top span,
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.hero-top span:last-child {
+    color: var(--muted);
+}
+
+.hero-title {
+    padding: 85px 0 48px;
+}
+
+.hero-title .eyebrow {
+    margin-bottom: 20px;
+    animation: fadeUp 0.8s 0.15s both;
+}
+
+.hero-title h1 {
+    font-size: clamp(58px, 10.5vw, 150px);
+    line-height: 0.91;
+    letter-spacing: -0.085em;
+    font-weight: 500;
+    animation: fadeUp 1s 0.25s both;
+}
+
+.hero-title h1 span {
+    color: var(--brown);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -0.075em;
+}
+
+.hero-bottom {
+    align-items: flex-end;
+    margin-bottom: 28px;
+}
+
+.hero-bottom p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.round-link {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    font-size: 21px;
+    transition: color 0.3s, background 0.3s, transform 0.3s;
+}
+
+.round-link:hover {
+    color: var(--cream);
+    background: var(--coffee);
+    transform: translateY(4px);
+}
+
+/* COFFEE PHOTO */
+
+.hero-photo {
+    position: relative;
+    min-height: 330px;
+    height: clamp(330px, 51vw, 650px);
+    overflow: hidden;
+    background-color: #b6a18b;
+    background-image:
+        linear-gradient(to top, rgba(28, 18, 13, 0.58), transparent 36%),
+        url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=2000&q=85');
+    background-position: center, center 55%;
+    background-size: cover;
+    animation: photoReveal 1.2s 0.3s both;
+}
+
+.photo-note {
+    position: absolute;
+    right: 25px;
+    bottom: 24px;
+    left: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+/* MOVING TEXT */
+
+.marquee {
+    padding: 24px 0;
+    overflow: hidden;
+    background: var(--coffee);
+    color: var(--cream);
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marqueeMove 24s linear infinite;
+}
+
+.marquee-track span {
+    flex-shrink: 0;
+    padding-right: 30px;
+    font-size: clamp(24px, 4vw, 48px);
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    white-space: nowrap;
+}
+
+.marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* SHARED SECTIONS */
+
+.section-padding {
+    padding: 110px 9%;
+}
+
+.section-padding .eyebrow {
+    margin-bottom: 28px;
+}
+
+.story h2,
+.menu-section h2,
+.visit h2 {
+    font-size: clamp(42px, 7vw, 90px);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.065em;
+}
+
+.story h2 span,
+.menu-section h2 span,
+.visit h2 span {
+    color: var(--brown);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.story-copy {
+    max-width: 440px;
+    margin: 28px 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.text-link {
+    display: inline-block;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--coffee);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* MENU */
+
+.menu-section {
+    background: #ebe2d6;
+}
+
+.menu-section h2 {
+    margin-bottom: 50px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.menu-card {
+    position: relative;
+    min-height: 230px;
+    padding: 32px 22px 30px 0;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.menu-card + .menu-card {
+    padding-left: 22px;
+    border-left: 1px solid var(--line);
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-number {
+    margin-bottom: 42px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.menu-card h3 {
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3vw, 34px);
+    font-weight: 500;
+}
+
+.menu-card p {
+    margin-bottom: 26px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.menu-card > span {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+/* VISIT */
+
+.visit {
+    text-align: center;
+}
+
+.visit h2 {
+    margin-bottom: 35px;
+}
+
+.visit-button {
+    display: inline-block;
+    padding: 16px 24px;
+    border: 1px solid var(--coffee);
+    border-radius: 40px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.visit-button:hover {
+    background: var(--coffee);
+    color: var(--cream);
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 28px 6%;
+    border-top: 1px solid var(--line);
+}
+
+.footer p,
+.footer > a:last-child {
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes photoReveal {
+    from { opacity: 0; transform: scale(1.035); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes marqueeMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 5% 20px;
+        background: var(--cream);
+        border-bottom: 1px solid var(--line);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .nav-button {
+        margin-left: auto;
+        padding: 10px 12px;
+        font-size: 9px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        padding: 22px 5% 45px;
+    }
+
+    .hero-top {
+        align-items: flex-start;
+        font-size: 9px;
+    }
+
+    .hero-top span {
+        max-width: 48%;
+        font-size: 8px;
+        line-height: 1.6;
+    }
+
+    .hero-title {
+        padding: 78px 0 38px;
+    }
+
+    .hero-title h1 {
+        font-size: clamp(53px, 11.5vw, 88px);
+    }
+
+    .hero-photo {
+        height: 115vw;
+        max-height: 560px;
+        min-height: 350px;
+        background-position: center, 58% center;
+    }
+
+    .photo-note {
+        right: 14px;
+        bottom: 16px;
+        left: 14px;
+        font-size: 7px;
+        letter-spacing: 0.8px;
+    }
+
+    .section-padding {
+        padding: 75px 6%;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card,
+    .menu-card + .menu-card {
+        min-height: auto;
+        padding: 25px 0;
+        border-left: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .menu-number {
+        margin-bottom: 22px;
+    }
+
+    .menu-card p {
+        margin-bottom: 18px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        padding: 25px 5%;
+    }
+
+    .footer p {
+        order: 3;
+        width: 100%;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* SCROLL REVEALS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger the menu cards slightly */
+.menu-card:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.menu-card:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+/* Subtle navigation effect */
+.navbar.scrolled {
+    background: rgba(245, 240, 232, 0.96);
+}
+
+/* ==================================
+   SLOW BREW — VISUAL COFFEE MENU
+   ================================== */
+
+.menu-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 42px;
+}
+
+.menu-heading h2 {
+    margin-bottom: 0;
+}
+
+.menu-intro {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.coffee-card {
+    min-width: 0;
+}
+
+.coffee-image {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #d8c8b7;
+}
+
+.coffee-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.coffee-card:hover .coffee-image img {
+    transform: scale(1.07);
+}
+
+.coffee-tag,
+.coffee-index {
+    position: absolute;
+    top: 14px;
+    z-index: 1;
+    padding: 9px 11px;
+    background: var(--cream);
+    color: var(--coffee);
+    font-size: 8px;
+    letter-spacing: 1.2px;
+}
+
+.coffee-tag {
+    left: 14px;
+}
+
+.coffee-index {
+    right: 14px;
+}
+
+.coffee-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 19px 0 25px;
+    border-bottom: 1px solid var(--line);
+}
+
+.coffee-info h3 {
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(20px, 2.2vw, 28px);
+    font-weight: 500;
+}
+
+.coffee-info p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.coffee-price {
+    padding-top: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.menu-disclaimer {
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.2px;
+}
+
+/* MOBILE MENU LAYOUT */
+
+@media (max-width: 760px) {
+    .menu-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .coffee-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .coffee-image {
+        aspect-ratio: 5 / 4;
+    }
+
+    .coffee-info h3 {
+        font-size: 26px;
+    }
+}
+
+/* SLOW BREW — CINEMATIC HERO */
+
+.hero-photo {
+    background-attachment: scroll;
+    will-change: background-position;
+}
+
+@media (min-width: 761px) {
+    .hero-photo {
+        background-attachment: fixed;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-photo {
+        background-attachment: scroll;
+    }
+}
+
+/* ==================================
+   VISIT — LOCATION & CONTACT
+   ================================== */
+
+.visit-description {
+    max-width: 480px;
+    margin: 22px auto 55px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.visit-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    text-align: left;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.visit-detail {
+    padding: 30px 20px;
+}
+
+.visit-detail:first-child {
+    padding-left: 0;
+}
+
+.visit-detail + .visit-detail {
+    border-left: 1px solid var(--line);
+}
+
+.detail-label {
+    display: block;
+    margin-bottom: 28px;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.visit-detail h3 {
+    margin-bottom: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.visit-detail p {
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.detail-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--coffee);
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    transition: opacity 0.3s;
+}
+
+.detail-link:hover {
+    opacity: 0.55;
+}
+
+@media (max-width: 760px) {
+    .visit-details {
+        grid-template-columns: 1fr;
+    }
+
+    .visit-detail,
+    .visit-detail:first-child {
+        padding: 25px 0;
+    }
+
+    .visit-detail + .visit-detail {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+    }
+
+    .detail-label {
+        margin-bottom: 18px;
+    }
+
+    .visit-description {
+        margin-bottom: 35px;
+    }
+}
+
+/* SLOW BREW — EDITORIAL GALLERY */
+
+.gallery-section {
+    overflow: hidden;
+}
+
+.gallery-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.gallery-heading h2 {
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.06em;
+}
+
+.gallery-heading h2 span {
+    color: var(--brown);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.gallery-heading > p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-rows: repeat(2, minmax(180px, 260px));
+    gap: 18px;
+}
+
+.gallery-item {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    background: #d8c8b7;
+}
+
+.gallery-tall {
+    grid-row: 1 / 3;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 35px 18px 16px;
+    background: linear-gradient(transparent, rgba(25, 17, 12, 0.65));
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 650px) {
+    .gallery-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 180px;
+        gap: 10px;
+    }
+
+    .gallery-tall {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+
+    .gallery-item figcaption {
+        padding: 28px 10px 12px;
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+}
+
+/* PREMIUM FLOATING WHATSAPP BUTTON */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 8px 9px 8px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+
+    background: #263c30;
+    color: #fffaf2;
+    text-decoration: none;
+
+    box-shadow: 0 8px 30px rgba(35, 49, 38, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation: whatsapp-appear 0.7s ease both;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-4px);
+    background: #355542;
+    box-shadow: 0 12px 35px rgba(35, 49, 38, 0.3);
+}
+
+.whatsapp-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.whatsapp-icon {
+    display: grid;
+    place-items: center;
+
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+
+    background: #f5f0e8;
+    color: #263c30;
+}
+
+.whatsapp-icon svg {
+    display: block;
+    width: 21px;
+    height: 21px;
+    fill: currentColor;
+}
+
+@keyframes whatsapp-appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
+        gap: 0;
+        padding: 7px;
+    }
+
+    .whatsapp-label {
+        display: none;
+    }
+
+    .whatsapp-icon {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-whatsapp {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* PREMIUM CUSTOMER TESTIMONIALS */
+
+.testimonials {
+    background: #eee7dc;
+    overflow: hidden;
+}
+
+.testimonials-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 42px;
+}
+
+.testimonials-heading h2 {
+    font-size: clamp(42px, 6vw, 74px);
+    line-height: 1.05;
+    letter-spacing: -0.06em;
+    font-weight: 500;
+}
+
+.testimonials-heading h2 span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--brown);
+}
+
+.testimonials-heading > p {
+    max-width: 245px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 26px 23px;
+    border: 1px solid rgba(90, 65, 46, 0.14);
+    background: rgba(255, 252, 246, 0.65);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(55, 38, 25, 0.08);
+}
+
+.testimonial-featured {
+    background: #fffaf2;
+}
+
+.testimonial-stars {
+    color: #98764b;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.testimonial-card blockquote {
+    margin: 22px 0 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(17px, 1.7vw, 22px);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.testimonial-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.testimonial-avatar {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #dfd1bd;
+    color: #493729;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+}
+
+.testimonial-person h3 {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.testimonial-person p {
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.testimonial-note {
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.2px;
+}
+
+@media (max-width: 800px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonial-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 550px) {
+    .testimonials-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .testimonial-card:last-child {
+        grid-column: auto;
+    }
+
+    .testimonial-card {
+        padding: 24px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .testimonial-card {
+        transition: none;
+    }
+}
+
+/* ==================================
+   SLOW BREW — MOBILE POLISH
+   ================================== */
+
+/* Prevent horizontal overflow */
+html {
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: clip;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Tablet screens */
+@media (max-width: 900px) {
+    .section-padding {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .coffee-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .coffee-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .coffee-card:last-child .coffee-image {
+        height: 300px;
+    }
+
+    .visit-details {
+        gap: 28px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 650px) {
+    .section-padding {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Hero */
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-top {
+        gap: 12px;
+        font-size: 9px;
+    }
+
+    .hero-top span:last-child {
+        text-align: right;
+    }
+
+    .hero-title h1 {
+        font-size: clamp(42px, 11vw, 68px);
+        line-height: 0.98;
+    }
+
+    .hero-bottom {
+        gap: 16px;
+    }
+
+    .hero-bottom p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    /* Story */
+    .story h2 {
+        font-size: clamp(32px, 8vw, 48px);
+        line-height: 1.15;
+    }
+
+    .story-copy {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    /* Menu heading */
+    .menu-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .menu-heading h2 {
+        font-size: clamp(36px, 9vw, 52px);
+    }
+
+    .menu-intro {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    /* Menu cards */
+    .coffee-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .coffee-card:last-child {
+        grid-column: auto;
+    }
+
+    .coffee-card:last-child .coffee-image,
+    .coffee-image {
+        height: clamp(240px, 70vw, 360px);
+    }
+
+    .coffee-info {
+        gap: 12px;
+        padding-top: 14px;
+    }
+
+    .coffee-info h3 {
+        font-size: 20px;
+    }
+
+    .coffee-price {
+        white-space: nowrap;
+    }
+
+    /* Gallery */
+    .gallery-heading {
+        gap: 16px;
+    }
+
+    .gallery-heading h2 {
+        font-size: clamp(38px, 9vw, 54px);
+    }
+
+    .gallery-heading > p {
+        font-size: 12px;
+    }
+
+    /* Testimonials */
+    .testimonials-heading h2 {
+        font-size: clamp(38px, 9vw, 54px);
+    }
+
+    /* Visit section */
+    .visit h2 {
+        font-size: clamp(44px, 11vw, 64px);
+        line-height: 1.05;
+    }
+
+    .visit-description {
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .visit-details {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Footer */
+    .footer {
+        gap: 16px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 9px;
+    }
+
+    .footer > a:last-child {
+        font-size: 10px;
+    }
+
+    /* Floating WhatsApp button */
+    .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .section-padding {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-top {
+        font-size: 8px;
+    }
+
+    .hero-title h1 {
+        font-size: 40px;
+    }
+
+    .coffee-image {
+        height: 230px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ======================================
+   SLOW BREW — PREMIUM MICRO-INTERACTIONS
+   ====================================== */
+
+
+/* Smooth, restrained image movement */
+.coffee-image img,
+.gallery-item img {
+    transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (hover: hover) {
+    .coffee-card:hover .coffee-image img {
+        transform: scale(1.035);
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.04);
+    }
+}
+
+/* Refined buttons and links */
+.nav-button,
+.round-link,
+.text-link,
+.detail-link {
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.nav-button:hover,
+.detail-link:hover {
+    opacity: 0.78;
+}
+
+.text-link:hover {
+    letter-spacing: 1px;
+}
+
+.round-link:hover {
+    transform: translateY(3px);
+}
+
+/* Accessible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #8b6548;
+    outline-offset: 4px;
+}
+
+/* Honour reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .custom-cursor {
+        display: none !important;
+    }
+
+    .coffee-image img,
+    .gallery-item img,
+    .testimonial-card,
+    .nav-button,
+    .round-link,
+    .text-link,
+    .detail-link {
+        transition: none !important;
+    }
+}
+/* PREMIUM NAVBAR SCROLL EFFECT */
+
+.navbar {
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        backdrop-filter 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(245, 240, 232, 0.96);
+    box-shadow: 0 4px 24px rgba(45, 31, 22, 0.07);
+    backdrop-filter: blur(12px);
+}
+/* TEA N' TALK — CAFE ACTION BUTTONS */
+
+.cafe-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.cafe-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px;
+    border: 1px solid #6f4e37;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.cafe-btn-primary {
+    background: #6f4e37;
+    color: #fffaf4;
+}
+
+.cafe-btn-primary:hover {
+    background: #513724;
+    transform: translateY(-2px);
+}
+
+.cafe-btn-secondary {
+    background: transparent;
+    color: #6f4e37;
+}
+
+.cafe-btn-secondary:hover {
+    background: #6f4e37;
+    color: #fffaf4;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .cafe-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cafe-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

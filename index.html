@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f0e8">
+    <meta name="description" content="Discover Tea N' Talk — thoughtfully brewed coffee, comforting drinks, and moments worth slowing down for.">
+    <title>Tea N' Talk — Good Coffee. Better Conversations.</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#home" class="logo">TEA N'<span> TALK.</span></a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#story">Our Story</a>
+            <a href="#menu">The Menu</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+
+        <a href="#visit" class="nav-button">Visit Us ↗</a>
+
+        <button class="menu-toggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                type="button">
+            ☰
+        </button>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-top">
+                <span>GOOD DRINKS. GOOD COMPANY.</span>
+                <span>MADE WITH LOVE · SERVED FRESH</span>
+            </div>
+
+            <div class="hero-title">
+                <p class="eyebrow">YOUR EVERYDAY HAPPY PLACE.</p>
+                <h1>GOOD SIPS.<br>
+                    <span>BETTER CHATS.</span>
+                </h1>
+            </div>
+
+            <div class="hero-bottom">
+                <p>Take a break from the rush.<br>
+                    Stay for one more conversation.</p>
+
+                <a href="#menu"
+                   class="round-link"
+                   aria-label="Explore our menu">↓</a>
+            </div>
+
+            <div class="hero-photo"
+                 role="img"
+                 aria-label="A warm and welcoming café atmosphere">
+                <div class="photo-note">
+                    <span>01 / YOUR HAPPY PLACE</span>
+                    <span>POURED FRESH. SHARED TOGETHER.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOVING TEXT -->
+        <section class="marquee" aria-label="Our café philosophy">
+            <div class="marquee-track">
+                <span>GOOD SIPS ✳ GREAT COMPANY ✳ MAKE TIME TO TALK ✳</span>
+                <span aria-hidden="true">GOOD SIPS ✳ GREAT COMPANY ✳ MAKE TIME TO TALK ✳</span>
+                <span aria-hidden="true">GOOD SIPS ✳ GREAT COMPANY ✳ MAKE TIME TO TALK ✳</span>
+                <span aria-hidden="true">GOOD SIPS ✳ GREAT COMPANY ✳ MAKE TIME TO TALK ✳</span>
+            </div>
+        </section>
+
+        <!-- OUR STORY -->
+        <section class="story section-padding" id="story">
+            <p class="eyebrow">A LITTLE MORE TOGETHER.</p>
+
+            <h2>Life feels better<br>
+                <span>over a good cup.</span>
+            </h2>
+
+            <p class="story-copy">
+                Some conversations deserve more time.
+                Some days need a little pause.
+                At Tea N' Talk, we're here for the warm drinks,
+                easy conversations, and little moments that make
+                an ordinary day feel special.
+            </p>
+
+            <a href="#visit" class="text-link">COME SAY HELLO ↗</a>
+        </section>
+
+        <!-- MENU -->
+        <section class="menu-section section-padding" id="menu">
+            <div class="menu-heading">
+                <div>
+                    <p class="eyebrow">MADE FOR YOUR MOOD</p>
+                    <h2>Find your <span>favourite.</span></h2>
+                </div>
+
+                <p class="menu-intro">
+                    Comfort in every cup,<br>
+                    and something for every kind of day.
+                </p>
+            </div>
+
+            <div class="coffee-grid">
+
+                <article class="coffee-card">
+                    <div class="coffee-image image-espresso">
+                        <img
+                            src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=900&q=85"
+                            alt="Freshly brewed espresso"
+                            loading="lazy">
+                        <span class="coffee-tag">THE CLASSIC</span>
+                        <span class="coffee-index">01</span>
+                    </div>
+
+                    <div class="coffee-info">
+                        <div>
+                            <h3>Espresso</h3>
+                            <p>Bold, rich, beautifully simple.</p>
+                        </div>
+                        <span class="coffee-price">₹120</span>
+                    </div>
+                </article>
+
+                <article class="coffee-card">
+                    <div class="coffee-image image-latte">
+                        <img
+                            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=85"
+                            alt="Creamy latte coffee"
+                            loading="lazy">
+                        <span class="coffee-tag">THE COMFORT</span>
+                        <span class="coffee-index">02</span>
+                    </div>
+
+                    <div class="coffee-info">
+                        <div>
+                            <h3>Velvet Latte</h3>
+                            <p>Silky milk, smooth espresso.</p>
+                        </div>
+                        <span class="coffee-price">₹180</span>
+                    </div>
+                </article>
+
+                <article class="coffee-card">
+                    <div class="coffee-image image-coldbrew">
+                        <img
+                            src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=85"
+                            alt="Iced coffee served in a glass"
+                            loading="lazy">
+                        <span class="coffee-tag">THE REFRESHER</span>
+                        <span class="coffee-index">03</span>
+                    </div>
+
+                    <div class="coffee-info">
+                        <div>
+                            <h3>Slow Cold Brew</h3>
+                            <p>Chilled, mellow, naturally smooth.</p>
+                        </div>
+                        <span class="coffee-price">₹200</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="menu-disclaimer">
+                DEMO MENU · ITEMS AND PRICES NEED CLIENT APPROVAL
+            </p>
+
+            <!-- ORDER AND RESERVATION BUTTONS -->
+            <div class="menu-actions">
+                <a
+                    href="#"
+                    class="cafe-btn cafe-btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Order on Zomato ↗
+                </a>
+
+                <a href="#visit"
+                   class="cafe-btn cafe-btn-secondary">
+                    Reserve a Table
+                </a>
+            </div>
+        </section>
+
+        <!-- PHOTO GALLERY -->
+        <section class="gallery-section section-padding" id="gallery">
+            <p class="eyebrow">A GLIMPSE INTO TEA N' TALK</p>
+
+            <div class="gallery-heading">
+                <h2>Little moments.<br>
+                    <span>Lovely conversations.</span>
+                </h2>
+
+                <p>
+                    A favourite drink, a familiar face,
+                    and time well spent.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+
+                <figure class="gallery-item gallery-tall">
+                    <img
+                        src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85"
+                        alt="Warm and inviting café interior"
+                        loading="lazy">
+                    <figcaption>01 — OUR SPACE</figcaption>
+                </figure>
+
+                <figure class="gallery-item gallery-small">
+                    <img
+                        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
+                        alt="Coffee being prepared"
+                        loading="lazy">
+                    <figcaption>02 — THE DAILY RITUAL</figcaption>
+                </figure>
+
+                <figure class="gallery-item gallery-small">
+                    <img
+                        src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=85"
+                        alt="Barista preparing a drink"
+                        loading="lazy">
+                    <figcaption>03 — MADE WITH CARE</figcaption>
+                </figure>
+
+            </div>
+
+            <p class="menu-disclaimer">
+                DEMO GALLERY · REPLACE WITH THE CLIENT'S OWN PHOTOS
+            </p>
+        </section>
+
+        <!-- CUSTOMER REVIEWS -->
+        <section class="testimonials section-padding" id="reviews">
+            <p class="eyebrow">KIND WORDS, GOOD DRINKS</p>
+
+            <div class="testimonials-heading">
+                <h2>A little love<br>
+                    in every <span>cup.</span>
+                </h2>
+
+                <p>
+                    The best café moments are the ones
+                    we get to share.
+                </p>
+            </div>
+
+            <div class="testimonial-grid">
+
+                <article class="testimonial-card">
+                    <span class="testimonial-stars"
+                          aria-label="Sample five-star rating">★★★★★</span>
+                    <blockquote>
+                        “The kind of place where you order a drink
+                        and accidentally stay for two hours.”
+                    </blockquote>
+                    <div class="testimonial-person">
+                        <span class="testimonial-avatar">A</span>
+                        <div>
+                            <h3>A happy visitor</h3>
+                            <p>Sample review</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card testimonial-featured">
+                    <span class="testimonial-stars"
+                          aria-label="Sample five-star rating">★★★★★</span>
+                    <blockquote>
+                        “A cosy atmosphere and just the pause
+                        my day needed.”
+                    </blockquote>
+                    <div class="testimonial-person">
+                        <span class="testimonial-avatar">M</span>
+                        <div>
+                            <h3>A café regular</h3>
+                            <p>Sample review</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <span class="testimonial-stars"
+                          aria-label="Sample five-star rating">★★★★★</span>
+                    <blockquote>
+                        “A lovely spot to catch up with friends
+                        over a favourite drink.”
+                    </blockquote>
+                    <div class="testimonial-person">
+                        <span class="testimonial-avatar">R</span>
+                        <div>
+                            <h3>A weekend visitor</h3>
+                            <p>Sample review</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="testimonial-note">
+                DEMO REVIEWS · REPLACE WITH REAL CUSTOMER FEEDBACK
+            </p>
+        </section>
+
+        <!-- VISIT US -->
+        <section class="visit section-padding" id="visit">
+            <p class="eyebrow">YOUR NEXT HAPPY MOMENT</p>
+
+            <h2>Your table<br>
+                is <span>waiting.</span>
+            </h2>
+
+            <p class="visit-description">
+                Bring a friend, take a break, or simply drop by
+                for your favourite drink. We'd love to see you.
+            </p>
+
+            <div class="visit-details">
+
+                <div class="visit-detail">
+                    <span class="detail-label">FIND US</span>
+                    <h3>Tea N' Talk</h3>
+                    <p>CAFE ADDRESS TO BE CONFIRMED</p>
+
+                    <a
+                        href="https://www.google.com/maps"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="detail-link">
+                        GET DIRECTIONS ↗
+                    </a>
+                </div>
+
+                <div class="visit-detail">
+                    <span class="detail-label">OPENING HOURS</span>
+                    <h3>Take your time.</h3>
+                    <p>HOURS TO BE CONFIRMED</p>
+                </div>
+
+                <div class="visit-detail">
+                    <span class="detail-label">SAY HELLO</span>
+                    <h3>Let's talk.</h3>
+                    <p>Questions, enquiries, or just saying hi.</p>
+
+                    <a
+                        href="https://wa.me/91XXXXXXXXXX"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="detail-link">
+                        WHATSAPP US ↗
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="menu-actions">
+                <a href="#"
+                   class="cafe-btn cafe-btn-primary">
+                    Order on Zomato ↗
+                </a>
+
+                <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Tea%20N%27%20Talk!%20I%27d%20like%20to%20enquire%20about%20booking%20a%20table."
+                   class="cafe-btn cafe-btn-secondary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Enquire on WhatsApp↗
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a
+        href="https://wa.me/91XXXXXXXXXX?text=Hi%20Tea%20N%27%20Talk!%20I%27d%20like%20to%20know%20more."
+        class="floating-whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact Tea N' Talk on WhatsApp">
+
+        <span class="whatsapp-label">Let's talk</span>
+
+        <span class="whatsapp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+                <path d="M20.52 3.48A11.8 11.8 0 0 0 12.1 0C5.56 0 .23 5.33.23 11.88c0 2.1.55 4.15 1.6 5.96L.13 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.23-6.15-3.47-8.42ZM12.1 21.76a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.75.98 1-3.65-.24-.38a9.83 9.83 0 0 1-1.51-5.24c0-5.45 4.44-9.89 9.9-9.89a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.89 7c0 5.46-4.44 9.9-9.9 9.9Zm5.43-7.41c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.24-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.48.71.31 1.27.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.73 2.02-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35Z"/>
+            </svg>
+        </span>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#home" class="logo">TEA N'<span> TALK.</span></a>
+        <p>GOOD SIPS. GREAT COMPANY.</p>
+        <a href="#home">BACK TO TOP ↑</a>
+    </footer>
+
+</body>
+</html>
